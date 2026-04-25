@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revisão de Véspera II — ANSA 2026 · Ênfase 13</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg:        #f4f3ef;
+    --bg2:       #ffffff;
+    --bg3:       #eceae4;
+    --bg4:       #e2e0d8;
+    --text:      #1c1b18;
+    --text2:     #3d3c38;
+    --text3:     #7a7870;
+    --border:    #d4d2c9;
+    --accent:    #b5451b;
+    --accent2:   #1b4db5;
+    --blue:      #1b4db5;
+    --blue-bg:   #e8eef9;
+    --blue-text: #0f2d75;
+    --red:       #b5451b;
+    --red-bg:    #fbeee9;
+    --red-text:  #7a2b0e;
+    --green:     #2a7a3b;
+    --green-bg:  #e8f5ec;
+    --green-text:#164d22;
+    --amber:     #a05e0a;
+    --amber-bg:  #fdf3e3;
+    --amber-text:#6b3d04;
+    --purple:    #5b3fa0;
+    --purple-bg: #f0ecfa;
+    --purple-text:#38277a;
+    --teal:      #0f6b68;
+    --teal-bg:   #e5f4f4;
+    --teal-text: #084644;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.08);
+    --shadow:    0 4px 12px rgba(0,0,0,0.08);
+    --radius:    8px;
+    --font: 'IBM Plex Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+
+  [data-theme="dark"] {
+    --bg:        #111210;
+    --bg2:       #1a1917;
+    --bg3:       #222120;
+    --bg4:       #2a2927;
+    --text:      #e8e6e0;
+    --text2:     #b0ae a8;
+    --text2:     #b0aea8;
+    --text3:     #706e68;
+    --border:    #333230;
+    --accent:    #e06030;
+    --accent2:   #4a7ae0;
+    --blue:      #4a7ae0;
+    --blue-bg:   #111b30;
+    --blue-text: #8ab0f0;
+    --red:       #e06030;
+    --red-bg:    #2a1008;
+    --red-text:  #f0a080;
+    --green:     #3aa050;
+    --green-bg:  #0a1e10;
+    --green-text:#80c890;
+    --amber:     #d08020;
+    --amber-bg:  #1e1200;
+    --amber-text:#f0b860;
+    --purple:    #8060d0;
+    --purple-bg: #180e2a;
+    --purple-text:#c0a8f0;
+    --teal:      #20a098;
+    --teal-bg:   #081818;
+    --teal-text: #70d0c8;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow:    0 4px 16px rgba(0,0,0,0.4);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .no-print { display: none !important; }
+    .tema-body.collapsed { display: block !important; }
+    body { background: #fff; color: #000; font-size: 12px; }
+    .site-header { position: static; background: #000; }
+    .wrapper { display: block; }
+    .sidebar { display: none; }
+    .main-content { padding: 0; max-width: 100%; }
+    a { color: #000; }
+    .bloco, .tema, .express-wrap, .checklist-wrap { break-inside: avoid; }
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--text);
+    color: var(--bg);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: 3px solid var(--accent);
+  }
+  [data-theme="dark"] .site-header { background: #0a0908; }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .header-left h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--bg);
+  }
+  .header-left p {
+    font-size: 0.78rem;
+    opacity: 0.65;
+    margin-top: 2px;
+  }
+  .header-right { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.12);
+    color: var(--bg);
+    border: 1px solid rgba(255,255,255,0.2);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .badge.red { background: var(--red); border-color: var(--red); }
+  .badge.green { background: #2a7a3b; border-color: #2a7a3b; }
+  .btn-theme {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--bg);
+    padding: 5px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn-theme:hover { background: rgba(255,255,255,0.2); }
+  .btn-print {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .btn-print:hover { opacity: 0.85; }
+
+  /* ── PARTE II BANNER ── */
+  .parte-banner {
+    background: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 8px 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── INDEX ── */
+  .index-bar {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .index-bar::-webkit-scrollbar { display: none; }
+  .index-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    margin-right: 12px;
+  }
+  .index-bar a {
+    font-size: 0.78rem;
+    color: var(--text2);
+    text-decoration: none;
+    margin-right: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    display: inline-block;
+    transition: all 0.15s;
+  }
+  .index-bar a:hover { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue); }
+  .index-bar a.checklist-link { background: var(--red-bg); color: var(--red-text); border-color: var(--red); font-weight: 700; }
+
+  /* ── LAYOUT ── */
+  .wrapper { display: flex; min-height: calc(100vh - 130px); }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 240px;
+    min-width: 200px;
+    flex-shrink: 0;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 130px;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .sidebar::-webkit-scrollbar { width: 3px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); }
+  .sb-section {
+    padding: 6px 1rem 2px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text3);
+    margin-top: 8px;
+  }
+  .sidebar a {
+    display: block;
+    padding: 6px 1rem 6px 1.2rem;
+    font-size: 0.8rem;
+    color: var(--text2);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+  }
+  .sidebar a:hover, .sidebar a.active {
+    background: var(--blue-bg);
+    color: var(--blue-text);
+    border-left-color: var(--blue);
+  }
+  .sidebar a.checklist-link-sb { color: var(--red-text) !important; font-weight: 700; }
+  .sidebar a.checklist-link-sb:hover { background: var(--red-bg) !important; border-left-color: var(--red) !important; }
+
+  /* ── MAIN ── */
+  .main-content {
+    flex: 1;
+    padding: 2rem 2.5rem;
+    max-width: 840px;
+    min-width: 0;
+  }
+
+  /* ── BLOCO HEADER ── */
+  .bloco-header {
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.25rem;
+    background: var(--bg2);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .bloco-header h2 { font-size: 1.05rem; font-weight: 700; }
+  .bloco-header p { font-size: 0.8rem; color: var(--text3); margin-top: 3px; }
+
+  /* ── TEMA ── */
+  .tema {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .tema-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.1rem;
+    cursor: pointer;
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+    gap: 10px;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .tema-header:hover { background: var(--blue-bg); }
+  .tema-header h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    flex: 1;
+    color: var(--text);
+  }
+  .tema-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--accent);
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .tema-arrow {
+    font-size: 0.75rem;
+    color: var(--text3);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .tema-arrow.open { transform: rotate(90deg); }
+  .tema-body { padding: 1.1rem; }
+  .tema-body.collapsed { display: none; }
+
+  /* ── GRID ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  @media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+  .grid-1 { margin-bottom: 10px; }
+
+  /* ── CARDS ── */
+  .card {
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0;
+  }
+  .card-label {
+    font-size: 0.67rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .card ul { padding-left: 16px; }
+  .card li { font-size: 0.85rem; margin-bottom: 4px; line-height: 1.55; }
+  .card p { font-size: 0.85rem; line-height: 1.6; }
+  .card p + p { margin-top: 5px; }
+
+  .card-conceito   { background: var(--blue-bg);   border-left: 3px solid var(--blue);   }
+  .card-conceito   .card-label { color: var(--blue-text);   }
+  .card-pegadinha  { background: var(--red-bg);    border-left: 3px solid var(--red);    }
+  .card-pegadinha  .card-label { color: var(--red-text);    }
+  .card-como-cai   { background: var(--green-bg);  border-left: 3px solid var(--green);  }
+  .card-como-cai   .card-label { color: var(--green-text);  }
+  .card-comparacao { background: var(--amber-bg);  border-left: 3px solid var(--amber);  }
+  .card-comparacao .card-label { color: var(--amber-text);  }
+  .card-dica       { background: var(--purple-bg); border-left: 3px solid var(--purple); }
+  .card-dica       .card-label { color: var(--purple-text); }
+
+  /* ── TABELA ── */
+  .tabela-wrap { overflow-x: auto; margin-top: 6px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.81rem;
+  }
+  th {
+    background: var(--bg4);
+    color: var(--text2);
+    font-weight: 700;
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+  }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+  [data-theme="dark"] tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  /* ── QUESTÃO ── */
+  .questao-wrap {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 10px;
+  }
+  .questao-label {
+    font-size: 0.67rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--teal-text);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .questao-texto {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding: 10px 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .questao-certo-errado {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .opt-btn {
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--text2);
+    font-family: var(--font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .opt-btn:hover { border-color: var(--blue); color: var(--blue-text); }
+  .gabarito-box {
+    display: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  .gabarito-certo  { background: var(--green-bg); color: var(--green-text); border: 1px solid #9dd4a8; }
+  .gabarito-errado { background: var(--red-bg);   color: var(--red-text);   border: 1px solid #f0b09a; }
+
+  /* ── SEPARADOR ── */
+  .sep { height: 1px; background: var(--border); margin: 2rem 0; }
+
+  /* ── ALERTA NOVO ── */
+  .alert-novo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--amber-bg);
+    border: 1px solid var(--amber);
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--amber-text);
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist-wrap {
+    background: var(--bg2);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .checklist-header {
+    background: var(--accent);
+    padding: 1rem 1.25rem;
+    color: #fff;
+  }
+  .checklist-header h2 { font-size: 1rem; font-weight: 700; }
+  .checklist-header p { font-size: 0.78rem; opacity: 0.8; margin-top: 3px; }
+  .checklist-body { padding: 1.1rem 1.25rem; }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-box {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border: 2px solid var(--border);
+    border-radius: 3px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: all 0.15s;
+    background: var(--bg);
+  }
+  .check-item.done .check-box {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .check-item.done .check-text { text-decoration: line-through; color: var(--text3); }
+  .check-text { font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+  .check-text b { color: var(--red-text); }
+
+  /* ── RODAPÉ ── */
+  .rodape {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--text3);
+    font-size: 0.78rem;
+    border-top: 1px solid var(--border);
+  }
+  .rodape strong { color: var(--accent); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main-content { padding: 1.25rem; }
+    .index-bar { padding: 0.5rem 1rem; }
+  }
+
+  code {
+    font-family: var(--mono);
+    background: var(--bg4);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.82em;
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header no-print">
+  <div class="header-inner">
+    <div class="header-left">
+      <h1>📋 Revisão de Véspera · PARTE II — ANSA 2026 · Ênfase 13</h1>
+      <p>Novos temas · Administração e Controle · Nível Médio · CEBRASPE · 26/04/2026</p>
+    </div>
+    <div class="header-right">
+      <span class="badge">P1: 30 questões</span>
+      <span class="badge">P2: 70 questões</span>
+      <span class="badge red">–0,5 por erro</span>
+      <span class="badge green">4h · Tarde</span>
+      <button class="btn-theme" onclick="toggleTheme()">🌙 Escuro</button>
+      <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER PARTE II -->
+<div class="parte-banner no-print">
+  ⚠️ PARTE II — Este material cobre exclusivamente temas NOVOS, não abordados na Parte I
+</div>
+
+<!-- ÍNDICE HORIZONTAL -->
+<div class="index-bar no-print">
+  <span class="index-label">Ir para:</span>
+  <a href="#bloco1">Bloco IV — Org. e Processos</a>
+  <a href="#t16">T16 · Planejamento</a>
+  <a href="#t17">T17 · Org. Formal/Informal</a>
+  <a href="#t18">T18 · Processos Organizacionais</a>
+  <a href="#t19">T19 · Comunicação Org.</a>
+  <a href="#t20">T20 · Liderança e Poder</a>
+  <a href="#bloco2">Bloco V — Qualidade</a>
+  <a href="#t21">T21 · Qualidade Total</a>
+  <a href="#t22">T22 · Indicadores</a>
+  <a href="#t23">T23 · PDCA e BSC</a>
+  <a href="#bloco3">Bloco VI — Contratos/Fiscal</a>
+  <a href="#t24">T24 · Gestão Contratos</a>
+  <a href="#t25">T25 · Notas Fiscais</a>
+  <a href="#bloco4">Bloco VII — Informática II</a>
+  <a href="#t26">T26 · Segurança da Informação</a>
+  <a href="#t27">T27 · Nuvem e Banco de Dados</a>
+  <a href="#t28">T28 · Legislação Trabalhista</a>
+  <a href="#checklist" class="checklist-link">✅ Checklist Final</a>
+</div>
+
+<!-- LAYOUT PRINCIPAL -->
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar no-print">
+    <div class="sb-section">Bloco IV — Org. e Processos</div>
+    <a href="#t16">T16 · Funções da Administração</a>
+    <a href="#t17">T17 · Org. Formal e Informal</a>
+    <a href="#t18">T18 · Processos Organizacionais</a>
+    <a href="#t19">T19 · Comunicação Organizacional</a>
+    <a href="#t20">T20 · Liderança, Poder e Motivação</a>
+
+    <div class="sb-section">Bloco V — Qualidade</div>
+    <a href="#t21">T21 · Qualidade Total (TQM)</a>
+    <a href="#t22">T22 · Indicadores de Desempenho</a>
+    <a href="#t23">T23 · PDCA, BSC e Lean</a>
+
+    <div class="sb-section">Bloco VI — Contratos/Fiscal</div>
+    <a href="#t24">T24 · Gestão de Contratos</a>
+    <a href="#t25">T25 · Documentos Fiscais e NF</a>
+
+    <div class="sb-section">Bloco VII — Informática II</div>
+    <a href="#t26">T26 · Segurança da Informação</a>
+    <a href="#t27">T27 · Computação em Nuvem e BD</a>
+
+    <div class="sb-section">Bloco VIII — Legislação</div>
+    <a href="#t28">T28 · Leg. Trabalhista e Previdenciária</a>
+
+    <div class="sb-section">Revisão Final</div>
+    <a href="#checklist" class="checklist-link-sb">✅ Checklist Final</a>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <div class="alert-novo">
+      ⭐ Material inédito — complementa a Parte I. Todos os temas aqui são novos, sem repetição de conteúdo anterior.
+    </div>
+
+    <!-- ════════════════════════════════════════════
+         BLOCO IV — ORGANIZAÇÃO E PROCESSOS
+    ════════════════════════════════════════════ -->
+    <div id="bloco1">
+      <div class="bloco-header">
+        <h2>🏛️ Bloco IV — Teoria da Administração e Processos Organizacionais</h2>
+        <p>Funções administrativas, estruturas, processos, comunicação e comportamento organizacional</p>
+      </div>
+
+      <!-- T16 -->
+      <div class="tema" id="t16">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T16</span>
+          <h3>Funções da Administração — PODC (Planejar, Organizar, Dirigir, Controlar)</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Planejar:</strong> definir objetivos e traçar o caminho para alcançá-los (futuro)</li>
+                <li><strong>Organizar:</strong> alocar recursos, estruturar tarefas e definir autoridade/responsabilidade</li>
+                <li><strong>Dirigir/Liderar:</strong> orientar, motivar e coordenar as pessoas na execução</li>
+                <li><strong>Controlar:</strong> monitorar resultados e corrigir desvios em relação ao planejado</li>
+                <li><strong>Planejamento estratégico:</strong> longo prazo, alta cúpula; tático: médio prazo, gerência; operacional: curto prazo, execução</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Controlar é a primeira função administrativa"</strong> → ERRADO: a primeira é Planejar</li>
+                <li><strong>"Dirigir trata de recursos materiais"</strong> → ERRADO: Dirigir trata de pessoas/comportamento</li>
+                <li>"Organizar" ≠ "planejar": organizar vem DEPOIS de planejar (executa a estrutura)</li>
+                <li>Controle sem planejamento é impossível — não há desvio a corrigir sem meta definida</li>
+                <li><strong>"Planejamento estratégico é feito pela gerência média"</strong> → ERRADO: é da alta cúpula (diretores/conselho)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-comparacao">
+              <div class="card-label">🔁 Níveis de Planejamento</div>
+              <div class="tabela-wrap">
+                <table>
+                  <tr><th>Nível</th><th>Prazo</th><th>Quem faz</th><th>Exemplo</th></tr>
+                  <tr><td>Estratégico</td><td>Longo (3–5+ anos)</td><td>Alta direção</td><td>Missão, visão, expansão</td></tr>
+                  <tr><td>Tático</td><td>Médio (1–3 anos)</td><td>Gerência</td><td>Metas por departamento</td></tr>
+                  <tr><td>Operacional</td><td>Curto (&lt;1 ano)</td><td>Supervisão/equipe</td><td>Cronogramas, procedimentos</td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>P.O.D.C.</strong> = <strong>P</strong>ensou, <strong>O</strong>rganizou, <strong>D</strong>irigiu, <strong>C</strong>onfirmou</p>
+              <p style="margin-top:6px">Imagine uma viagem: Planejar a rota → Organizar as malas → Dirigir o carro → Controlar o GPS</p>
+            </div>
+          </div>
+          <div class="card card-como-cai grid-1">
+            <div class="card-label">📌 Como cai na prova</div>
+            <ul>
+              <li>Identificar qual função administrativa está sendo descrita num cenário</li>
+              <li>Sequência correta das funções: a banca embaralha a ordem</li>
+              <li>Perguntas sobre qual nível de planejamento corresponde a uma situação</li>
+              <li>Afirmações atribuindo controle à função de organizar ou vice-versa</li>
+            </ul>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">A função administrativa de controle possui autonomia própria e pode ser exercida independentemente do planejamento, sendo responsável por estabelecer os objetivos que servirão de parâmetro para a avaliação de resultados.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — O controle é diretamente dependente do planejamento: só se pode controlar (verificar desvios) quando há objetivos previamente definidos. Além disso, quem ESTABELECE os objetivos é a função Planejar, não Controlar.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T17 -->
+      <div class="tema" id="t17">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T17</span>
+          <h3>Estrutura Organizacional — Formal, Informal, Departamentalização</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Organização formal:</strong> estrutura oficial, hierarquia, cargos e normas estabelecidas pela gestão</li>
+                <li><strong>Organização informal:</strong> relações espontâneas entre pessoas, não previstas no organograma</li>
+                <li><strong>Amplitude de controle:</strong> número de subordinados que um gestor supervisiona diretamente</li>
+                <li><strong>Centralização:</strong> decisões concentradas na cúpula; <strong>Descentralização:</strong> decisões delegadas para níveis inferiores</li>
+                <li><strong>Organograma:</strong> representação gráfica da estrutura formal da organização</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Organização informal é prejudicial e deve ser eliminada"</strong> → ERRADO: pode ser usada positivamente (coesão de equipe, comunicação mais rápida)</li>
+                <li><strong>"Centralização aumenta a agilidade das decisões"</strong> → ERRADO: centralização tende a retardar decisões</li>
+                <li>Amplitude estreita = mais níveis hierárquicos; amplitude larga = organização mais horizontal (achatada)</li>
+                <li><strong>"Organograma representa a org. informal"</strong> → ERRADO: representa a estrutura FORMAL</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Tipos de Departamentalização</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Tipo</th><th>Critério de agrupamento</th><th>Exemplo</th><th>Vantagem</th></tr>
+                <tr><td>Funcional</td><td>Função/especialidade</td><td>Depto. de RH, Financeiro, TI</td><td>Especialização técnica</td></tr>
+                <tr><td>Por produto</td><td>Produto ou serviço</td><td>Divisão de aviação, navios</td><td>Foco no produto</td></tr>
+                <tr><td>Por cliente</td><td>Tipo de cliente</td><td>Varejo, corporativo, governo</td><td>Atendimento personalizado</td></tr>
+                <tr><td>Geográfica</td><td>Região territorial</td><td>Regional Norte, Sul</td><td>Adaptação local</td></tr>
+                <tr><td>Matricial</td><td>Funcional + projeto</td><td>Equipe de projeto multifuncional</td><td>Flexibilidade e especialização</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-comparacao">
+              <div class="card-label">🔁 Centralização vs. Descentralização</div>
+              <div class="tabela-wrap">
+                <table>
+                  <tr><th>Centralização</th><th>Descentralização</th></tr>
+                  <tr><td>Decisão na cúpula</td><td>Decisão delegada</td></tr>
+                  <tr><td>Maior controle</td><td>Maior agilidade local</td></tr>
+                  <tr><td>Menor autonomia</td><td>Maior motivação</td></tr>
+                  <tr><td>Bom em crises</td><td>Bom em ambientes dinâmicos</td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>Formal</strong> = o que está no papel (organograma, regras)</p>
+              <p style="margin-top:5px"><strong>Informal</strong> = o que está nas relações (amizades, grupos)</p>
+              <p style="margin-top:5px">Departamentalização: <strong>FPCGM</strong> = Funcional, Produto, Cliente, Geográfica, Matricial</p>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">A organização informal, por surgir espontaneamente das interações entre os membros da organização sem previsão no organograma, deve ser combatida e eliminada pela administração, pois representa um obstáculo à eficiência organizacional.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — A organização informal não deve necessariamente ser eliminada. Quando bem compreendida e gerenciada, pode contribuir positivamente para a coesão da equipe, o fluxo de comunicação e a motivação dos colaboradores. A literatura de administração reconhece seu valor.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T18 -->
+      <div class="tema" id="t18">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T18</span>
+          <h3>Gestão por Processos — BPM, Fluxograma e Mapeamento</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Processo:</strong> conjunto de atividades inter-relacionadas que transforma entradas (inputs) em saídas (outputs) com valor agregado</li>
+                <li><strong>BPM (Business Process Management):</strong> disciplina de gerenciamento sistemático dos processos de negócio</li>
+                <li><strong>Fluxograma:</strong> representação gráfica das etapas de um processo em sequência lógica</li>
+                <li><strong>Processo-fim (finalístico):</strong> diretamente ligado ao produto/serviço principal da organização</li>
+                <li><strong>Processo-meio (de suporte):</strong> dá suporte aos processos finalísticos (RH, TI, financeiro)</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Processo finalístico é o mesmo que processo de suporte"</strong> → ERRADO: são opostos em função</li>
+                <li><strong>"Fluxograma representa a hierarquia da organização"</strong> → ERRADO: hierarquia é o organograma; fluxograma representa PROCESSOS</li>
+                <li>BPM ≠ software de automação: BPM é uma disciplina gerencial; ferramentas de software são apenas instrumentos</li>
+                <li><strong>"Todo processo tem entrada mas não necessariamente saída"</strong> → ERRADO: todo processo tem entrada E saída por definição</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Organograma vs. Fluxograma</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Característica</th><th>Organograma</th><th>Fluxograma</th></tr>
+                <tr><td>O que representa</td><td>Estrutura hierárquica</td><td>Sequência de atividades/processo</td></tr>
+                <tr><td>Foco</td><td>Cargos e unidades</td><td>Fluxo de trabalho</td></tr>
+                <tr><td>Relação exibida</td><td>Autoridade e subordinação</td><td>Entrada → processamento → saída</td></tr>
+                <tr><td>Uso típico</td><td>Estrutura da empresa</td><td>Mapeamento e melhoria de processos</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">Na gestão por processos, o fluxograma e o organograma são ferramentas equivalentes que podem ser utilizadas de forma intercambiável para representar tanto a estrutura hierárquica quanto o fluxo de atividades da organização.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — As ferramentas têm finalidades distintas e não são intercambiáveis. O organograma representa a ESTRUTURA hierárquica (cargos, autoridade, subordinação), enquanto o fluxograma representa o FLUXO de um processo (sequência de atividades, decisões, entradas e saídas).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T19 -->
+      <div class="tema" id="t19">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T19</span>
+          <h3>Comunicação Organizacional — Fluxos, Barreiras e Canais</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Comunicação descendente:</strong> da cúpula para base (ordens, políticas, feedback de desempenho)</li>
+                <li><strong>Comunicação ascendente:</strong> da base para cúpula (relatórios, sugestões, reclamações)</li>
+                <li><strong>Comunicação lateral/horizontal:</strong> entre pares do mesmo nível hierárquico</li>
+                <li><strong>Ruído:</strong> qualquer interferência que distorça a mensagem entre emissor e receptor</li>
+                <li><strong>Feedback:</strong> retorno da comunicação — confirma se a mensagem foi recebida/compreendida</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Ruído é apenas o barulho físico"</strong> → ERRADO: ruído é qualquer barreira à comunicação (semântica, psicológica, física, cultural)</li>
+                <li><strong>"Comunicação descendente é mais eficaz"</strong> → ERRADO: cada fluxo tem sua aplicação; sem ascendente, a gestão perde feedback</li>
+                <li>Canal ≠ mensagem ≠ código: a banca confunde os elementos do processo comunicativo</li>
+                <li><strong>"Feedback é um elemento opcional da comunicação eficaz"</strong> → ERRADO: é essencial para confirmar a compreensão</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Elementos do Processo de Comunicação</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Elemento</th><th>Definição</th><th>Exemplo</th></tr>
+                <tr><td>Emissor</td><td>Quem envia a mensagem</td><td>Gestor que envia o e-mail</td></tr>
+                <tr><td>Codificação</td><td>Transformação da ideia em símbolos</td><td>Escolha das palavras</td></tr>
+                <tr><td>Mensagem</td><td>Conteúdo transmitido</td><td>Texto do e-mail</td></tr>
+                <tr><td>Canal</td><td>Meio de transmissão</td><td>E-mail corporativo</td></tr>
+                <tr><td>Decodificação</td><td>Interpretação pelo receptor</td><td>Leitura e compreensão</td></tr>
+                <tr><td>Receptor</td><td>Quem recebe</td><td>Colaborador</td></tr>
+                <tr><td>Ruído</td><td>Interferência no processo</td><td>Palavras ambíguas, distrações</td></tr>
+                <tr><td>Feedback</td><td>Resposta do receptor</td><td>Confirmação de recebimento</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">Na comunicação organizacional, o ruído refere-se exclusivamente às interferências físicas e acústicas que dificultam a transmissão de mensagens verbais entre os membros da organização.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — O ruído na comunicação não se limita a interferências físicas/acústicas. Abrange qualquer barreira que distorça a mensagem: semânticas (ambiguidade de palavras), psicológicas (preconceitos, estados emocionais), culturais (diferenças de valores) e físicas (barulho, falha técnica).</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T20 -->
+      <div class="tema" id="t20">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T20</span>
+          <h3>Liderança, Poder e Teorias Motivacionais</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Teoria de Maslow:</strong> hierarquia de necessidades em 5 níveis (fisiológicas, segurança, sociais, estima, autorrealização)</li>
+                <li><strong>Teoria de Herzberg:</strong> fatores higiênicos (evitam insatisfação, mas não motivam) vs. fatores motivacionais (geram satisfação)</li>
+                <li><strong>Teoria X:</strong> pessoas são preguiçosas e precisam ser controladas; <strong>Teoria Y:</strong> pessoas são criativas e se automotivam</li>
+                <li><strong>Liderança situacional (Hersey/Blanchard):</strong> o estilo de liderança deve variar conforme a maturidade do liderado</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Salário é fator motivacional em Herzberg"</strong> → ERRADO: salário é fator HIGIÊNICO (evita insatisfação, mas não motiva)</li>
+                <li><strong>"Maslow: ao atingir nível 5, volta ao nível 1"</strong> → ERRADO: necessidades satisfeitas não motivam; passa-se ao nível seguinte</li>
+                <li><strong>"Teoria X = liderança autocrática; Teoria Y = democrática"</strong> → correlação válida, mas cuidado ao afirmar equivalência total</li>
+                <li>Liderança ≠ gerência: liderança envolve influência; gerência é posição formal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Herzberg: Higiênicos vs. Motivacionais</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Fatores Higiênicos (extrínsecos)</th><th>Fatores Motivacionais (intrínsecos)</th></tr>
+                <tr><td>Salário e benefícios</td><td>Realização e conquista</td></tr>
+                <tr><td>Condições físicas de trabalho</td><td>Reconhecimento pelo trabalho</td></tr>
+                <tr><td>Relacionamento com colegas</td><td>Responsabilidade crescente</td></tr>
+                <tr><td>Política e normas da empresa</td><td>Crescimento profissional</td></tr>
+                <tr><td>Estabilidade no emprego</td><td>Natureza do próprio trabalho</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-comparacao">
+              <div class="card-label">🔁 Pirâmide de Maslow (base → topo)</div>
+              <ul>
+                <li>1 · Fisiológicas (alimentação, sono)</li>
+                <li>2 · Segurança (estabilidade, proteção)</li>
+                <li>3 · Sociais/Afeto (relacionamentos)</li>
+                <li>4 · Estima (reconhecimento, status)</li>
+                <li>5 · Autorrealização (potencial máximo)</li>
+              </ul>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>Herzberg:</strong> "Salário é higiênico — limpa a insatisfação, mas não motiva"</p>
+              <p style="margin-top:5px"><strong>Maslow:</strong> <em>FSS-EA</em> = Fisiológicas → Segurança → Sociais → Estima → Autorrealização</p>
+              <p style="margin-top:5px"><strong>X vs Y:</strong> X = "eXigir controle"; Y = "Yaô, confio em você!"</p>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">De acordo com a teoria dos dois fatores de Herzberg, o salário, por ser um elemento central de recompensa ao trabalho, constitui um fator motivacional que, quando elevado, gera satisfação e aumenta a produtividade dos colaboradores.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — Para Herzberg, o salário é um fator HIGIÊNICO (extrínseco). Quando adequado, apenas evita a insatisfação; quando aumentado, não gera motivação nem satisfação duradoura. Os fatores que realmente motivam são os intrínsecos (realização, reconhecimento, crescimento).</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /bloco1 -->
+
+    <div class="sep"></div>
+
+    <!-- ════════════════════════════════════════════
+         BLOCO V — QUALIDADE
+    ════════════════════════════════════════════ -->
+    <div id="bloco2">
+      <div class="bloco-header">
+        <h2>🎯 Bloco V — Gestão da Qualidade e Ferramentas de Melhoria</h2>
+        <p>TQM, indicadores, PDCA, BSC, Lean Manufacturing e ferramentas da qualidade</p>
+      </div>
+
+      <!-- T21 -->
+      <div class="tema" id="t21">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T21</span>
+          <h3>Qualidade Total (TQM) — Princípios, Normas ISO e 5S</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>TQM (Total Quality Management):</strong> abordagem sistêmica de melhoria contínua envolvendo toda a organização</li>
+                <li><strong>ISO 9001:</strong> norma internacional de sistema de gestão da qualidade (processos e certificação)</li>
+                <li><strong>5S:</strong> Seiri (Utilização), Seiton (Organização), Seiso (Limpeza), Seiketsu (Padronização), Shitsuke (Autodisciplina)</li>
+                <li><strong>Deming:</strong> pai do controle da qualidade; ciclo PDCA; ênfase em processos estatísticos</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"ISO 9001 garante que o produto é de qualidade"</strong> → ERRADO: certifica que o PROCESSO DE GESTÃO DA QUALIDADE é adequado</li>
+                <li><strong>"5S é exclusivo do setor industrial"</strong> → ERRADO: aplica-se a qualquer organização (inclusive serviços)</li>
+                <li>O 4º S (Seiketsu) = Padronização — a banca frequentemente troca com Shitsuke (Disciplina)</li>
+                <li><strong>"Qualidade total foca apenas no produto final"</strong> → ERRADO: foca em TODOS os processos e em toda a cadeia</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Os 5S — Significados</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Senso</th><th>Palavra japonesa</th><th>Significado</th><th>Exemplo prático</th></tr>
+                <tr><td>1S</td><td>Seiri</td><td>Utilização / Seleção</td><td>Descartar o que não serve</td></tr>
+                <tr><td>2S</td><td>Seiton</td><td>Organização / Ordenação</td><td>Um lugar para cada coisa</td></tr>
+                <tr><td>3S</td><td>Seiso</td><td>Limpeza</td><td>Limpar e identificar causas de sujeira</td></tr>
+                <tr><td>4S</td><td>Seiketsu</td><td>Padronização</td><td>Criar normas dos 3 primeiros S</td></tr>
+                <tr><td>5S</td><td>Shitsuke</td><td>Autodisciplina</td><td>Manter e melhorar os padrões</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">A certificação ISO 9001 atesta que os produtos e serviços de uma organização possuem qualidade superior à média do mercado, garantindo ao consumidor que os bens adquiridos estão isentos de defeitos.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — A ISO 9001 certifica o SISTEMA DE GESTÃO DA QUALIDADE, ou seja, os processos e procedimentos da organização para controlar a qualidade. Ela não garante que o produto seja superior ou isento de defeitos — certifica que há um processo estruturado para buscar a qualidade.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T22 -->
+      <div class="tema" id="t22">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T22</span>
+          <h3>Indicadores de Desempenho — KPIs, Eficiência, Eficácia e Efetividade</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Eficiência:</strong> fazer certo as coisas — relação entre resultado e recurso utilizado (menor custo/esforço possível)</li>
+                <li><strong>Eficácia:</strong> fazer as coisas certas — alcance dos objetivos/metas estabelecidos</li>
+                <li><strong>Efetividade:</strong> impacto real na sociedade/beneficiário — resultado de longo prazo</li>
+                <li><strong>Economicidade:</strong> obter o maior resultado com menor custo (ligada à eficiência)</li>
+                <li><strong>KPI (Key Performance Indicator):</strong> indicador-chave de desempenho mensurável</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Eficiência = alcance dos objetivos"</strong> → ERRADO: isso é EFICÁCIA. Eficiência = usar bem os recursos</li>
+                <li><strong>"É possível ser eficiente sem ser eficaz"</strong> → CERTO: pode-se usar bem os recursos e ainda não atingir o objetivo</li>
+                <li><strong>"É possível ser eficaz sem ser eficiente"</strong> → CERTO: atingir o objetivo gastando muito mais que o necessário</li>
+                <li>Efetividade ≠ eficácia: efetividade mede o impacto REAL na população/beneficiário, não apenas o resultado imediato</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Eficiência vs. Eficácia vs. Efetividade</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Conceito</th><th>Pergunta central</th><th>Foco</th><th>Exemplo</th></tr>
+                <tr><td>Eficiência</td><td>Como faço? Com que custo?</td><td>Recursos/meios</td><td>Perfurar o poço no menor prazo</td></tr>
+                <tr><td>Eficácia</td><td>Atingi o objetivo?</td><td>Resultado/meta</td><td>O poço produziu petróleo?</td></tr>
+                <tr><td>Efetividade</td><td>Qual o impacto real?</td><td>Impacto social/longo prazo</td><td>A produção melhorou a renda local?</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-como-cai">
+              <div class="card-label">📌 Como cai na prova</div>
+              <ul>
+                <li>Cenário descrevendo uma situação e pedindo classificação (eficiente? eficaz?)</li>
+                <li>Afirmação que mistura os conceitos dos 3 Es</li>
+                <li>Questão afirmando que eficiência implica eficácia ou vice-versa (ERRADO)</li>
+              </ul>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>Eficiê<u>n</u>cia</strong> = meios (N de recursos utilizados)</p>
+              <p style="margin-top:5px"><strong>Efic<u>á</u>cia</strong> = metas (Atingiu?)</p>
+              <p style="margin-top:5px"><strong>Efetividade</strong> = efeito real (impacto na sociedade)</p>
+              <p style="margin-top:5px">Mnemônico: "3 Es em ordem crescente de abrangência"</p>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">Uma organização que utiliza o mínimo de recursos disponíveis para executar suas atividades é, necessariamente, eficaz, pois a economia de recursos demonstra o atingimento dos objetivos organizacionais.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — Eficiência (usar bem os recursos) NÃO implica eficácia (atingir o objetivo). Uma organização pode executar processos com economia de recursos e mesmo assim não alcançar suas metas. Os conceitos são independentes — é possível ser eficiente sem ser eficaz, e vice-versa.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T23 -->
+      <div class="tema" id="t23">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T23</span>
+          <h3>PDCA, Balanced Scorecard (BSC) e Ferramentas da Qualidade</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave — PDCA</div>
+              <ul>
+                <li><strong>Plan (Planejar):</strong> identificar o problema, analisar causas, definir meta e plano de ação</li>
+                <li><strong>Do (Executar):</strong> implementar o plano de ação</li>
+                <li><strong>Check (Verificar):</strong> monitorar resultados e comparar com as metas</li>
+                <li><strong>Act (Agir/Corrigir):</strong> padronizar se deu certo; reiniciar o ciclo se houve desvio</li>
+                <li>Ciclo contínuo — nunca termina; gera melhoria contínua (kaizen)</li>
+              </ul>
+            </div>
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave — BSC</div>
+              <ul>
+                <li><strong>BSC (Balanced Scorecard):</strong> ferramenta de gestão estratégica com 4 perspectivas equilibradas</li>
+                <li><strong>Perspectiva Financeira:</strong> resultado econômico (ROI, lucro, receita)</li>
+                <li><strong>Perspectiva dos Clientes:</strong> satisfação, retenção, participação de mercado</li>
+                <li><strong>Perspectiva dos Processos Internos:</strong> qualidade, inovação, tempo de ciclo</li>
+                <li><strong>Perspectiva de Aprendizado e Crescimento:</strong> pessoas, TI, cultura organizacional</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"O PDCA começa na etapa Do (executar)"</strong> → ERRADO: começa em Plan (planejar)</li>
+                <li><strong>"BSC foca somente em indicadores financeiros"</strong> → ERRADO: equilibra 4 perspectivas (daí "Balanced")</li>
+                <li><strong>"Act no PDCA significa criar um novo processo"</strong> → ERRADO: Act significa padronizar (se OK) ou replanejar (se houve desvio)</li>
+                <li>Diagrama de Ishikawa (Espinha de Peixe) ≠ Diagrama de Pareto: Ishikawa = causas; Pareto = priorização por frequência</li>
+              </ul>
+            </div>
+            <div class="card card-comparacao">
+              <div class="card-label">🔁 Ferramentas da Qualidade</div>
+              <div class="tabela-wrap">
+                <table>
+                  <tr><th>Ferramenta</th><th>Para que serve</th></tr>
+                  <tr><td>Diagrama de Ishikawa</td><td>Identificar causas-raiz de um problema</td></tr>
+                  <tr><td>Diagrama de Pareto</td><td>Priorizar causas (80/20)</td></tr>
+                  <tr><td>Histograma</td><td>Frequência de ocorrências</td></tr>
+                  <tr><td>Carta de controle</td><td>Monitorar variações do processo</td></tr>
+                  <tr><td>5 Porquês</td><td>Aprofundar análise de causa-raiz</td></tr>
+                  <tr><td>Brainstorming</td><td>Geração criativa de ideias/soluções</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">O Balanced Scorecard é uma ferramenta de gestão estratégica que, por ter foco exclusivo em indicadores financeiros, permite à organização mensurar com precisão seu desempenho econômico e orientar a tomada de decisões da alta administração.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — O BSC, ao contrário do que afirma a questão, NÃO tem foco exclusivo em indicadores financeiros. O nome "Balanced" (equilibrado) reflete exatamente o oposto: a ferramenta equilibra 4 perspectivas interdependentes — Financeira, Clientes, Processos Internos e Aprendizado/Crescimento.</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /bloco2 -->
+
+    <div class="sep"></div>
+
+    <!-- ════════════════════════════════════════════
+         BLOCO VI — CONTRATOS E FISCAL
+    ════════════════════════════════════════════ -->
+    <div id="bloco3">
+      <div class="bloco-header">
+        <h2>📄 Bloco VI — Gestão de Contratos e Documentos Fiscais</h2>
+        <p>Contratos administrativos, notas fiscais, patrimônio, depreciação e inventário</p>
+      </div>
+
+      <!-- T24 -->
+      <div class="tema" id="t24">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T24</span>
+          <h3>Gestão de Contratos — Tipos, Vigência, Fiscalização e Aditivos</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Contrato:</strong> acordo formal entre partes com obrigações e direitos mutuamente definidos</li>
+                <li><strong>Fiscal de contrato:</strong> servidor/colaborador designado para acompanhar e fiscalizar a execução do contrato</li>
+                <li><strong>Aditivo contratual:</strong> instrumento para alterar cláusulas do contrato original (prazo, objeto, valor)</li>
+                <li><strong>Reequilíbrio econômico-financeiro:</strong> ajuste do contrato quando eventos imprevistos alteram a equação original de custos</li>
+                <li><strong>SLA (Service Level Agreement):</strong> acordo de nível de serviço — define métricas mínimas de qualidade do serviço contratado</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"O fiscal de contrato é o mesmo que o gestor de contrato"</strong> → ERRADO: o fiscal acompanha a execução técnica; o gestor cuida dos aspectos administrativos — funções distintas</li>
+                <li><strong>"Aditivo pode alterar qualquer cláusula sem limite"</strong> → ERRADO: há limites percentuais legais para alteração de valor</li>
+                <li>Rescisão unilateral ≠ rescisão amigável: unilateral é por iniciativa de uma das partes; amigável é por acordo mútuo</li>
+                <li><strong>"SLA define apenas o preço do serviço"</strong> → ERRADO: SLA define MÉTRICAS DE QUALIDADE e disponibilidade, não o preço</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Fiscal vs. Gestor de Contrato</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Papel</th><th>Responsabilidade principal</th><th>Foco</th></tr>
+                <tr><td>Gestor de Contrato</td><td>Gerenciamento administrativo e estratégico do contrato</td><td>Prazos, pagamentos, aditivos, renovações</td></tr>
+                <tr><td>Fiscal de Contrato</td><td>Acompanhamento técnico da execução</td><td>Qualidade, entrega, conformidade com o objeto</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">O fiscal de contrato é o responsável pela gestão administrativa do instrumento contratual, cabendo-lhe autorizar pagamentos, aprovar aditivos e promover a renovação de contratos, conforme necessidade da organização.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — As atribuições descritas correspondem ao GESTOR DE CONTRATO. O fiscal de contrato tem função técnica: acompanhar e verificar se a execução do objeto contratado está sendo realizada conforme as especificações. A autorização de pagamentos e aprovação de aditivos cabe ao gestor.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T25 -->
+      <div class="tema" id="t25">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T25</span>
+          <h3>Documentos Fiscais, NF-e, Patrimônio e Depreciação</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>NF-e (Nota Fiscal Eletrônica):</strong> documento fiscal digital emitido para operações de compra e venda de mercadorias ou prestação de serviços</li>
+                <li><strong>DANFE:</strong> Documento Auxiliar da Nota Fiscal Eletrônica — representação gráfica simplificada da NF-e para acompanhar mercadorias</li>
+                <li><strong>Bem patrimonial:</strong> bem de uso duradouro da organização (imóveis, veículos, equipamentos)</li>
+                <li><strong>Depreciação:</strong> perda de valor de bens ao longo do tempo pelo uso, obsolescência ou desgaste natural</li>
+                <li><strong>Inventário patrimonial:</strong> levantamento físico dos bens para conferência com os registros contábeis</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"DANFE é a própria NF-e"</strong> → ERRADO: DANFE é apenas a representação auxiliar/auxiliar impressa da NF-e</li>
+                <li><strong>"Terrenos se depreciam"</strong> → ERRADO: terrenos NÃO são depreciados (não se desgastam com o uso)</li>
+                <li><strong>"Depreciação acelerada ocorre por falta de uso"</strong> → ERRADO: depreciação acelerada ocorre por uso intenso ou legislação específica</li>
+                <li>Tombamento ≠ inventário: tombamento é o registro/identificação do bem; inventário é o levantamento periódico</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Bens que se depreciam vs. Bens que não se depreciam</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Depreciam</th><th>NÃO depreciam</th></tr>
+                <tr><td>Veículos e máquinas</td><td>Terrenos</td></tr>
+                <tr><td>Equipamentos e computadores</td><td>Obras de arte (em geral)</td></tr>
+                <tr><td>Edificações e instalações</td><td>Ativos intangíveis com vida útil indefinida</td></tr>
+                <tr><td>Móveis e utensílios</td><td>Estoques (são baixados ao consumo)</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">O DANFE constitui o próprio documento fiscal eletrônico válido para fins legais, substituindo integralmente a Nota Fiscal Eletrônica e tendo plena validade jurídica nas operações de compra e venda de mercadorias.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — O DANFE é apenas o Documento AUXILIAR da NF-e — uma representação gráfica simplificada que acompanha fisicamente as mercadorias. O documento fiscal válido para fins legais é a NF-e (arquivo XML eletrônico). O DANFE não substitui a NF-e.</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /bloco3 -->
+
+    <div class="sep"></div>
+
+    <!-- ════════════════════════════════════════════
+         BLOCO VII — INFORMÁTICA II
+    ════════════════════════════════════════════ -->
+    <div id="bloco4">
+      <div class="bloco-header">
+        <h2>💾 Bloco VII — Informática II (Temas Novos)</h2>
+        <p>Segurança da informação, nuvem, banco de dados, e-mail e backup</p>
+      </div>
+
+      <!-- T26 -->
+      <div class="tema" id="t26">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T26</span>
+          <h3>Segurança da Informação — Princípios CID, Malwares e Boas Práticas</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>CID / CIA:</strong> Confidencialidade (só quem deve acessa), Integridade (dado íntegro, não alterado), Disponibilidade (sistema acessível quando necessário)</li>
+                <li><strong>Autenticidade:</strong> garante que o autor da informação é quem diz ser</li>
+                <li><strong>Não repúdio:</strong> o emissor não pode negar que enviou a mensagem</li>
+                <li><strong>Vírus:</strong> precisa de hospedeiro; <strong>Worm:</strong> autorreplica sem hospedeiro; <strong>Ransomware:</strong> sequestra dados e exige resgate; <strong>Phishing:</strong> engana o usuário para roubar dados</li>
+                <li><strong>Firewall:</strong> controla o tráfego de rede entre ambientes confiáveis e não confiáveis</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Antivírus protege contra todos os tipos de ameaças"</strong> → ERRADO: protege contra algumas, mas não todas (ex.: engenharia social, phishing sofisticado)</li>
+                <li><strong>"Firewall impede todos os ataques"</strong> → ERRADO: firewall filtra tráfego, mas não bloqueia ataques internos ou phishing</li>
+                <li>Worm ≠ Vírus: worm se propaga sozinho, sem precisar se anexar a um arquivo hospedeiro</li>
+                <li><strong>"Criptografia garante disponibilidade"</strong> → ERRADO: criptografia garante CONFIDENCIALIDADE e integridade, não disponibilidade</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Tipos de Malware</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Malware</th><th>Como age</th><th>Característica única</th></tr>
+                <tr><td>Vírus</td><td>Infecta arquivos, precisa de ação do usuário</td><td>Necessita de hospedeiro para se propagar</td></tr>
+                <tr><td>Worm</td><td>Se propaga pela rede autonomamente</td><td>Não precisa de hospedeiro nem de ação do usuário</td></tr>
+                <tr><td>Trojan (Cavalo de Tróia)</td><td>Disfarça-se de programa legítimo</td><td>Abre portas para outros ataques</td></tr>
+                <tr><td>Ransomware</td><td>Criptografa dados e exige resgate</td><td>Impacto financeiro direto</td></tr>
+                <tr><td>Spyware</td><td>Monitora e envia informações do usuário</td><td>Espionagem silenciosa</td></tr>
+                <tr><td>Phishing</td><td>Engana o usuário por e-mail/site falso</td><td>Engenharia social, não código malicioso</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-como-cai">
+              <div class="card-label">📌 Como cai na prova</div>
+              <ul>
+                <li>Identificar qual princípio CID foi violado num cenário</li>
+                <li>Descrever um malware e pedir sua identificação</li>
+                <li>Afirmar que um recurso (firewall, antivírus) resolve todos os problemas de segurança</li>
+              </ul>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>CID</strong> = C de <u>C</u>ofre (confidencial), I de <u>I</u>ntocável (íntegro), D de <u>D</u>isponível</p>
+              <p style="margin-top:5px">Worm = <strong>W</strong>orm anda sozinho (como uma minhoca/worm em inglês que se move sem ajuda)</p>
+              <p style="margin-top:5px">Phishing = <strong>ph</strong>ishing de pesca — lança isca para o usuário morder</p>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">O ransomware é um tipo de malware que, ao infectar o sistema da vítima, monitora silenciosamente as atividades do usuário e envia informações sensíveis — como senhas e dados bancários — para o atacante, sem que o usuário perceba qualquer lentidão no sistema.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — A descrição corresponde ao SPYWARE (monitora e envia dados silenciosamente). O ransomware age de forma diferente: criptografa os dados/arquivos da vítima e exige pagamento de resgate (em geral em criptomoeda) para fornecer a chave de descriptografia. O impacto do ransomware é perceptível imediatamente.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T27 -->
+      <div class="tema" id="t27">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T27</span>
+          <h3>Computação em Nuvem, Backup e Banco de Dados</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave — Nuvem</div>
+              <ul>
+                <li><strong>IaaS (Infrastructure as a Service):</strong> infraestrutura (servidores, storage, rede) como serviço</li>
+                <li><strong>PaaS (Platform as a Service):</strong> plataforma de desenvolvimento como serviço</li>
+                <li><strong>SaaS (Software as a Service):</strong> software como serviço (ex.: Gmail, Office 365)</li>
+                <li><strong>Nuvem pública:</strong> recursos compartilhados com outros clientes (ex.: AWS, Azure)</li>
+                <li><strong>Nuvem privada:</strong> infraestrutura exclusiva da organização</li>
+                <li><strong>Nuvem híbrida:</strong> combinação de pública e privada</li>
+              </ul>
+            </div>
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave — Backup e BD</div>
+              <ul>
+                <li><strong>Backup completo:</strong> copia todos os dados (mais demorado, mais seguro)</li>
+                <li><strong>Backup incremental:</strong> copia apenas o que mudou desde o último backup (qualquer tipo)</li>
+                <li><strong>Backup diferencial:</strong> copia tudo que mudou desde o último backup COMPLETO</li>
+                <li><strong>SGBD:</strong> Sistema Gerenciador de Banco de Dados (MySQL, Oracle, SQL Server)</li>
+                <li><strong>SQL:</strong> linguagem de consulta estruturada para bancos relacionais</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"SaaS oferece a infraestrutura"</strong> → ERRADO: SaaS oferece o SOFTWARE; IaaS oferece infraestrutura</li>
+                <li><strong>"Backup incremental copia tudo desde o último backup completo"</strong> → ERRADO: isso é o DIFERENCIAL; o incremental copia o que mudou desde o ÚLTIMO backup de qualquer tipo</li>
+                <li><strong>"Nuvem pública é exclusiva de uma organização"</strong> → ERRADO: nuvem PRIVADA é exclusiva</li>
+                <li>"Nuvem elimina todos os riscos de segurança" → ERRADO: introduz novos riscos (acesso remoto, compartilhamento)</li>
+              </ul>
+            </div>
+            <div class="card card-comparacao">
+              <div class="card-label">🔁 IaaS × PaaS × SaaS</div>
+              <div class="tabela-wrap">
+                <table>
+                  <tr><th>Modelo</th><th>O que oferece</th><th>Exemplo</th></tr>
+                  <tr><td>IaaS</td><td>Infraestrutura (HW virtual)</td><td>AWS EC2, Azure VMs</td></tr>
+                  <tr><td>PaaS</td><td>Plataforma de desenvolvimento</td><td>Google App Engine</td></tr>
+                  <tr><td>SaaS</td><td>Software pronto para uso</td><td>Gmail, Salesforce, Office 365</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">No contexto da computação em nuvem, o modelo SaaS (Software as a Service) é aquele em que o provedor disponibiliza ao cliente a infraestrutura computacional — como servidores virtuais, armazenamento e redes — para que o cliente instale e gerencie seus próprios sistemas operacionais e aplicações.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — A descrição corresponde ao modelo IaaS (Infrastructure as a Service), e não ao SaaS. No SaaS, o provedor disponibiliza o SOFTWARE completo e pronto para uso via internet, sem que o cliente precise gerenciar infraestrutura, sistema operacional ou plataforma. Exemplos de SaaS: Gmail, Microsoft 365, Salesforce.</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /bloco4 -->
+
+    <div class="sep"></div>
+
+    <!-- ════════════════════════════════════════════
+         BLOCO VIII — LEGISLAÇÃO TRABALHISTA
+    ════════════════════════════════════════════ -->
+    <div id="bloco5">
+      <div class="bloco-header">
+        <h2>⚖️ Bloco VIII — Noções de Legislação Trabalhista e Previdenciária</h2>
+        <p>CLT, contrato de trabalho, jornada, férias, rescisão e previdência social</p>
+      </div>
+
+      <!-- T28 -->
+      <div class="tema" id="t28">
+        <div class="tema-header" onclick="toggleTema(this)">
+          <span class="tema-number">T28</span>
+          <h3>CLT — Contrato de Trabalho, Jornada, Férias e Rescisão</h3>
+          <span class="tema-arrow">▶</span>
+        </div>
+        <div class="tema-body collapsed">
+          <div class="grid-2">
+            <div class="card card-conceito">
+              <div class="card-label">⚖️ Conceito-chave</div>
+              <ul>
+                <li><strong>Jornada normal:</strong> máx. 8h/dia e 44h/semana (CLT, art. 58)</li>
+                <li><strong>Hora extra:</strong> máx. 2h/dia; adicional mínimo de 50%; domingos/feriados = 100%</li>
+                <li><strong>Férias:</strong> 30 dias após 12 meses (período aquisitivo); 1/3 constitucional adicionado ao salário</li>
+                <li><strong>Aviso prévio:</strong> mínimo 30 dias + 3 dias por ano trabalhado (máx. 60 dias extras = 90 dias total)</li>
+                <li><strong>FGTS:</strong> 8% do salário bruto depositado pelo empregador mensalmente</li>
+              </ul>
+            </div>
+            <div class="card card-pegadinha">
+              <div class="card-label">🚨 Pegadinha CEBRASPE</div>
+              <ul>
+                <li><strong>"Férias devem ser gozadas sempre em 30 dias corridos"</strong> → ERRADO: podem ser parceladas (máx. 3 períodos, sendo 1 de no mínimo 14 dias)</li>
+                <li><strong>"Hora extra máxima é de 4 horas/dia"</strong> → ERRADO: máx. 2 horas/dia (CLT)</li>
+                <li><strong>"O 1/3 de férias é opcional"</strong> → ERRADO: é direito constitucional garantido (CF, art. 7º, XVII)</li>
+                <li><strong>"FGTS é descontado do salário do empregado"</strong> → ERRADO: é encargo do EMPREGADOR — não desconta do salário</li>
+                <li>Demissão sem justa causa ≠ pedido de demissão: na sem justa causa, há multa de 40% sobre FGTS; no pedido, não</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card card-comparacao grid-1">
+            <div class="card-label">🔁 Tipos de Rescisão e Verbas</div>
+            <div class="tabela-wrap">
+              <table>
+                <tr><th>Tipo de Rescisão</th><th>Aviso Prévio</th><th>Multa FGTS</th><th>Seguro-Desemprego</th></tr>
+                <tr><td>Demissão sem justa causa</td><td>Sim (pago pelo empregador)</td><td>40%</td><td>Sim</td></tr>
+                <tr><td>Pedido de demissão</td><td>Sim (cumprido pelo empregado)</td><td>Não</td><td>Não</td></tr>
+                <tr><td>Demissão por justa causa</td><td>Não</td><td>Não</td><td>Não</td></tr>
+                <tr><td>Rescisão indireta (culpa do empregador)</td><td>Não (do empregado)</td><td>40%</td><td>Sim</td></tr>
+                <tr><td>Acordo entre partes (§6° CLT)</td><td>Metade</td><td>20%</td><td>Não</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="card card-como-cai">
+              <div class="card-label">📌 Como cai na prova</div>
+              <ul>
+                <li>Calcular verbas rescisórias num cenário dado</li>
+                <li>Identificar qual tipo de rescisão corresponde à situação descrita</li>
+                <li>Afirmações sobre limites de jornada e hora extra</li>
+                <li>Questões sobre quem paga o FGTS (empregador, nunca o empregado)</li>
+              </ul>
+            </div>
+            <div class="card card-dica">
+              <div class="card-label">🧠 Dica de memorização</div>
+              <p><strong>8-44-2:</strong> 8h/dia · 44h/semana · máx. 2h extra/dia</p>
+              <p style="margin-top:5px"><strong>FGTS = 8%:</strong> encargo do empregador (não sai do bolso do empregado)</p>
+              <p style="margin-top:5px"><strong>Demissão s/ justa causa:</strong> empregado leva 40% de multa sobre FGTS + seguro-desemprego</p>
+              <p style="margin-top:5px"><strong>Férias = 30 dias + 1/3</strong> constitucional sobre salário</p>
+            </div>
+          </div>
+          <div class="questao-wrap">
+            <div class="questao-label">✅ Questão provável</div>
+            <div class="questao-texto">O FGTS (Fundo de Garantia do Tempo de Serviço) corresponde a 8% do salário bruto do empregado e é descontado diretamente de sua remuneração mensal pelo empregador, que deve repassar o valor ao fundo administrado pela Caixa Econômica Federal.</div>
+            <div class="questao-certo-errado">
+              <button class="opt-btn" onclick="revelar(this,'errado')">Ver gabarito</button>
+            </div>
+            <div class="gabarito-box gabarito-errado">❌ ERRADO — O FGTS é um encargo do EMPREGADOR, equivalente a 8% sobre o salário bruto do empregado. Ele NÃO é descontado da remuneração do trabalhador — é uma contribuição adicional paga pela empresa por cima do salário. O empregado recebe seu salário integral, e o empregador deposita separadamente o FGTS na Caixa.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ════════════════════════════════════════════
+         CHECKLIST FINAL
+    ════════════════════════════════════════════ -->
+    <div id="checklist">
+      <div class="checklist-wrap">
+        <div class="checklist-header">
+          <h2>✅ Checklist Final de Revisão — Parte II</h2>
+          <p>Clique em cada item ao revisar. Marque tudo antes de dormir!</p>
+        </div>
+        <div class="checklist-body">
+
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>PODC:</b> Planejar → Organizar → Dirigir → Controlar. Quem define objetivos é o Planejar, não o Controlar.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Organização informal:</b> não deve ser eliminada — pode ser usada positivamente. Organograma representa só a organização FORMAL.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Fluxograma ≠ Organograma:</b> fluxograma mostra processos; organograma mostra hierarquia/cargos. A banca sistematicamente os confunde.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Salário em Herzberg = fator HIGIÊNICO</b> (evita insatisfação). Fatores motivacionais são intrínsecos: realização, reconhecimento, crescimento.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>ISO 9001:</b> certifica o PROCESSO DE GESTÃO DA QUALIDADE — não garante que o produto é superior ou isento de defeitos.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Eficiência ≠ Eficácia:</b> é possível ser eficiente sem ser eficaz (e vice-versa). Efetividade = impacto social real, mais abrangente que eficácia.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>BSC não é só financeiro:</b> 4 perspectivas — Financeira, Clientes, Processos Internos, Aprendizado/Crescimento. "Balanced" = equilibrado.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Fiscal ≠ Gestor de Contrato:</b> fiscal acompanha execução técnica; gestor cuida dos aspectos administrativos (pagamentos, aditivos, renovação).</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>DANFE ≠ NF-e:</b> DANFE é só o documento auxiliar/impresso. A NF-e (arquivo XML eletrônico) é o documento fiscal válido. DANFE não substitui a NF-e.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Ransomware ≠ Spyware:</b> ransomware = sequestra e exige resgate; spyware = espiona silenciosamente. Worm se propaga sozinho, sem hospedeiro.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>SaaS ≠ IaaS:</b> SaaS = software pronto (Gmail, Office); IaaS = infraestrutura (servidores virtuais). A banca troca os modelos de nuvem.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Backup incremental ≠ diferencial:</b> incremental = mudanças desde o ÚLTIMO backup (qualquer); diferencial = mudanças desde o último COMPLETO.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>FGTS = encargo do empregador (8%).</b> NÃO é descontado do salário do empregado. Demissão s/ justa causa = multa de 40% sobre FGTS.</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Jornada CLT: 8h/dia · 44h/semana · máx. 2h extra/dia.</b> Férias = 30 dias + 1/3 constitucional (obrigatório, não opcional).</div>
+          </div>
+          <div class="check-item" onclick="marcar(this)">
+            <div class="check-box"></div>
+            <div class="check-text"><b>Terrenos NÃO se depreciam.</b> Depreciação ocorre em máquinas, veículos, equipamentos e edificações — não em terrenos nem em estoques.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <div class="rodape">
+      <p>📝 ANSA 2026 · Ênfase 13 · Revisão de Véspera — <strong>Parte II</strong></p>
+      <p style="margin-top:4px">Material inédito complementar à Parte I · Banca CEBRASPE · Prova: 26/04/2026</p>
+      <p style="margin-top:10px; font-size:1rem;"><strong>🚀 Confie na preparação. Agora é só executar. Boa prova!</strong></p>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  /* ── THEME ── */
+  function toggleTheme() {
+    const html = document.documentElement;
+    const btn = document.querySelector('.btn-theme');
+    if (html.getAttribute('data-theme') === 'dark') {
+      html.removeAttribute('data-theme');
+      btn.textContent = '🌙 Escuro';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      btn.textContent = '☀️ Claro';
+    }
+  }
+
+  /* ── ACCORDION ── */
+  function toggleTema(header) {
+    const body = header.nextElementSibling;
+    const arrow = header.querySelector('.tema-arrow');
+    if (body.classList.contains('collapsed')) {
+      body.classList.remove('collapsed');
+      arrow.classList.add('open');
+    } else {
+      body.classList.add('collapsed');
+      arrow.classList.remove('open');
+    }
+  }
+
+  /* ── GABARITO ── */
+  function revelar(btn, tipo) {
+    const wrap = btn.closest('.questao-wrap');
+    const box = wrap.querySelector('.gabarito-box');
+    if (box.style.display === 'block') {
+      box.style.display = 'none';
+      btn.textContent = 'Ver gabarito';
+    } else {
+      box.style.display = 'block';
+      btn.textContent = 'Ocultar';
+    }
+  }
+
+  /* ── CHECKLIST ── */
+  function marcar(item) {
+    item.classList.toggle('done');
+    const box = item.querySelector('.check-box');
+    box.textContent = item.classList.contains('done') ? '✓' : '';
+  }
+
+  /* ── SIDEBAR ACTIVE ── */
+  const allSections = document.querySelectorAll('[id]');
+  const sbLinks = document.querySelectorAll('.sidebar a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    allSections.forEach(s => {
+      if (s.getBoundingClientRect().top <= 160) current = s.id;
+    });
+    sbLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
